@@ -3,7 +3,7 @@ version=1.10.7
 apt -y update
 apt -y install sudo
 sudo apt install -y git subversion build-essential autoconf automake libtool libncurses5 libncurses5-dev make libjpeg-dev libtool libtool-bin libsqlite3-dev libpcre3-dev libspeexdsp-dev libldns-dev libedit-dev yasm liblua5.2-dev libopus-dev cmake libcurl4-openssl-dev libexpat1-dev libgnutls28-dev libtiff5-dev libx11-dev unixodbc-dev libssl-dev python-dev zlib1g-dev libasound2-dev libogg-dev libvorbis-dev libperl-dev libgdbm-dev libdb-dev uuid-dev libsndfile1-dev unzip python3.8-distutils
-sudo apt install -y libavformat-dev libswscale-dev libpq-dev
+sudo apt install -y libavformat-dev libswscale-dev libpq-dev libshout3-dev
 
 cd /usr/src
 sudo git clone https://github.com/signalwire/libks.git
