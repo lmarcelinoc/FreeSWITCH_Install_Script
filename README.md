@@ -1,5 +1,5 @@
-# FreeSWITCH_Install_Script
-Ubuntu Install Script for FreeSWITCH 20.04
+# FreeSWITCH_Install_Script - updated for 22.04 on 12/4/2023
+Ubuntu Install Script for FreeSWITCH 22.04
 
 1. git clone or download the installer file
 2. chmod +x freeswitch_ubuntu_installer.sh
