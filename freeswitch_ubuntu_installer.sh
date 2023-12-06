@@ -26,10 +26,7 @@ sudo make install
 cd /usr/src
 rm freeswitch*zip*
 sudo wget https://files.freeswitch.org/freeswitch-releases/freeswitch-$version-release.zip
-sudo unzip freeswitch-$version-release.zip
-
-sleep 10
-
+sudo unzip -o freeswitch-$version-release.zip
 
 # Remove existing symlink if it exists
 sudo rm -f /usr/src/freeswitch
@@ -39,6 +36,7 @@ cd /usr/src
 sudo ln -s /usr/src/freeswitch-${version}-release/ /usr/src/freeswitch
 
 cd /usr/src/freeswitch
+rm -rf spandsp
 git clone https://github.com/freeswitch/spandsp.git
 cd spandsp
 ./bootstrap.sh -j
@@ -48,6 +46,7 @@ make install
 ldconfig
 
 cd /usr/src/freeswitch
+rm -rf sofia-sip
 git clone https://github.com/freeswitch/sofia-sip.git
 cd sofia-sip
 ./bootstrap.sh -j
