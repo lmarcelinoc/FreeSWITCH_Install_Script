@@ -8,6 +8,7 @@ sudo apt install -y libavformat-dev libswscale-dev libpq-dev libshout3-dev
 sudo apt -y install unzip
 
 cd /usr/src
+rm -rf libks
 sudo git clone https://github.com/signalwire/libks.git
 cd libks
 sudo cmake .
@@ -15,6 +16,7 @@ sudo make
 sudo make install
 
 cd /usr/src
+rm -rf signalwire-c
 git clone https://github.com/signalwire/signalwire-c.git
 cd signalwire-c
 sudo cmake .
