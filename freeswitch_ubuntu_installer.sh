@@ -25,8 +25,10 @@ sudo make install
 
 cd /usr/src
 rm freeswitch*zip*
+rm -rf freswitch-$version-release
 sudo wget https://files.freeswitch.org/freeswitch-releases/freeswitch-$version-release.zip
 sudo unzip -o freeswitch-$version-release.zip
+
 
 # Remove existing symlink if it exists
 sudo rm -f /usr/src/freeswitch
@@ -46,7 +48,7 @@ make install
 ldconfig
 
 cd /usr/src/freeswitch
-rm -rf sofia-sip
+rm sofia-sip
 git clone https://github.com/freeswitch/sofia-sip.git
 cd sofia-sip
 ./bootstrap.sh -j
@@ -71,6 +73,7 @@ sudo chown -R freeswitch:freeswitch /usr/local/freeswitch/
 sudo chmod -R ug=rwX,o= /usr/local/freeswitch/
 sudo chmod -R u=rwx,g=rx /usr/local/freeswitch/bin/
 
+sudo systemctl stop freeswitch.service
 rm /etc/systemd/system/freeswitch.service
 sudo tee -a /etc/systemd/system/freeswitch.service  <<EOF
 [Unit]
